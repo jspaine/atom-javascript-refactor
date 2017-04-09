@@ -42,7 +42,7 @@
     "jscodeshift": "^0.3.20",
     "react-for-atom": "^15.0.2-1",
     "redux": "^3.5.2",
-    "refactoring-codemods": "0.3.2"
+    "refactoring-codemods": "jspaine/refactoring-codemods#ed6bca5"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
@@ -65,7 +65,8 @@
     "test": "npm run test:flow && npm run test:lint && npm run test:unit",
     "test:flow": "flow check",
     "test:lint": "eslint .",
-    "test:unit": "jest --coverage"
+    "test:unit": "jest --coverage",
+    "postinstall": "cd node_modules/refactoring-codemods; npm install && npm run build"
   },
   "babel": {
     "plugins": [
